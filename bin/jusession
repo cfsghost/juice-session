@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var JuiceSession = require('../lib/juice-session');
+
+var configFile = null;
+
+if (process.argv.length == 3) {
+	if (process.argv[2])
+		configFile = process.argv[2];
+}
+
+var juSession = new JuiceSession;
+juSession.init(configFile);
